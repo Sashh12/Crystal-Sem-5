@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+{% block main-content %}
+    {% comment %} <div class="container mt-3">
+        <br>
+        <h2 class="text-center">Contact Us</h2>
+        <br>
+        <div class="row container">
+            <p class="fs-4 text-center">Address: Vasai</p>
+            <p class="fs-4 text-center">contact: 9xxxx 1xxxx</p>
+            <p class="fs-4 text-center">Instagram Id: @thecrystalpalace</p>
+        </div>
+    </div> {% endcomment %}
+    <div class="container" id="contact">
+        <h1 class="center">Contact</h1>
+        <br>
+        <p>At TheCrystalPalace, we're committed to providing exceptional service and assistance. Whether you have questions about our products, need support, or want to explore partnership opportunities, we're here to help. Feel free to reach out through any of the provided contact methods, and our dedicated team will assist you.</p>
+        <p class="w3-text-blue-grey w3-large center"><b>TheCrystalPalace, 42nd Living St, 401203, Vasai</b></p>
+        <p class="center">You can also contact us by phone 00553123-2323 or email thecrystalpalace@gmail.com, or you can send us a message here:</p>
+    </div>
+    <div class= "center container mt-3">
+        <br>
+        <a href ="{% url "feedback" %}"><button class=" button button1">Feedback</button></a>
+        <br> 
+    </div>
+
+    
+
+<br><br>
+<br><br>
+<br><br>
+
+{% endblock main-content %}

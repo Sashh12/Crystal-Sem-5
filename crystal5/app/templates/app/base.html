@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'app/css/all.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'app/css/style.css'%}"/>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <title>TCP | {% block title %}{% endblock title %}</title>
+    {% comment %} <link rel ="icon" href="app\static\app\images\homepage\weblogo.png"> {% endcomment %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger-subtle">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'app/images/homepage/LogoCrystal.png' %}" width="100" height="100"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link text-black active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkRight">
+                  <li><a class="dropdown-item" href="{% url 'ByCategory' %}">By Category</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ByMeaning'%}">By Meaning</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ByColour'%}">By Colour</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ByCrystals'%}">By Crystals</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black" href="{% url "about" %}">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black" href="{% url 'contact'%}">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" action="/search">
+              <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
+              <button class="btn btn-outline-danger-subtle" type="submit"><img src="{%static "app\images\homepage\search.png" %}"width="40" height="40"/></button>
+            </form>
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link text-black dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="{%static "app\images\homepage\account.png" %}"width="40" height="40"/></a>
+              <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="{% url "profile" %}">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url "passwordchange" %}">Change Password</a></li> 
+                <li><a class="dropdown-item" href="{% url "orders" %}">My Orders</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url "logout" %}">Logout</a></li>
+              </ul>
+            </li>
+            <li class="nav-item  mx-2">
+              <a href="{% url 'showcart' %}"> 
+                {% comment %} <span class="badge bg-danger">{% if totalitem > 0 %}{{totalitem}}{% endif %}</span> {% endcomment %}
+                <img src="{%static "app\images\homepage\cart.png" %}"width="40" height="40"/></a>
+                <li class="nav-item  mx-2">
+                  <a href="{% url 'wishlist' %}"> 
+                    {% comment %} <span class="badge bg-danger">{% if totalitem > 0 %}{{totalitem}}{% endif %}</span> {% endcomment %}
+                    <img src="{%static "app\images\homepage\wishlist.png" %}"width="40" height="40"/></a>
+            {% else %}
+            <li class="nav-item mx-2 "><a href="{% url "customerregistration" %}" class="nav-link text-black">Register</a></li>
+            <li class="nav-item  mx-2"><a href="{% url "login" %}"class="nav-link text-black">Login</a></li>
+            {% endif %}
+            
+          </ul>
+        </div>
+      </nav>
+
+
+      {% block banner-slider %}{% endblock banner-slider %}
+      {% block information %}{% endblock information %}
+      {% block main-content %}{% endblock main-content %}
+      {% block payment-gateway %}{% endblock payment-gateway %}
+
+      <footer class="bg-dark text-center text-white">
+      
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+      
+            <!-- Instagram -->
+            <a  class="btn btn-outline-light btn-floating m-1"  href="https://www.instagram.com/the.sallsation/" target="_blank" rel="noopener" role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+      
+          </section>
+          
+        </div>
+        
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-white" href="/">TheCrystalPalace</a>
+        </div>
+        
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+
+    <script src="{%static 'app/js/owl.carousel.min.js' %}"></script>
+    <script src="{%static 'app/js/all.min.js' %}"></script>
+    <script src="{%static 'app/js/myscript.js' %}"></script>
+</body>
+</html>

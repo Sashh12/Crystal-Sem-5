@@ -1,0 +1,82 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Choose{% endblock title %}
+
+{% block main-content %}
+    <div class="container mt-3">
+        <br>
+        <div class="text-center">
+        <h2 style="font-family: Georgia;">How to cleanse your crystals</h2></div>
+        </br>
+        <div class="row">
+            <div class="column">
+                <div class="baa text-center ">
+                    <img src="{%static 'app/images/product/54.jpg'%}">
+                </div>
+            </div>
+            <div class="column">
+                {% comment %} <div class="baa text-center ">
+                    <img src="{%static 'app/images/product/57.jpg'%}">
+                </div> {% endcomment %}
+                <div class ="as jewellery" style="text-align: center">
+                    <a href="{% url 'category' 'SE' %}">
+                     <div class="baa ">
+                       <img src="{%static 'app/images/product/s1.jpg'%}"
+                       class="img-responsive center-block" alt="">
+                       <br></br>
+                       <p class="fs-4 my-2 braclets">Selenite</p>
+                      </div>
+                    </a>
+                  </div> 
+            </div>
+            <div class="column">
+                <div class="baa text-center ">
+                    <img src="{%static 'app/images/product/58.jpg'%}">
+                </div>
+            </div>
+          </div>
+        <div class="row container">
+            <div class="text-center">
+            <!--<h1 style="font-family: Georgia; font-size: 40px;">Your Journey of Healing Begins Here!</h1>-->
+            <h1 style="font-family: 'Lora', serif; font-size: 20px;">There are a few ways you can choose a crystal, whether it’s your first or just the latest to add to your collection.</h1></div>
+            <br></br>
+            <div class="text-left">
+                <h4 style="font-family: 'Crimson Pro', serif; font-size: 26px; text-align: justify;">  
+                    <ol>
+                        <li>Just like uses, there are a few ways to cleanse your crystals. Remember that if your crystals aren’t a type that can be used in water, use one of the other cleansing methods!</li>
+
+                        <li>Put them outside or on a windows on a full moon to recharge.
+                    
+                        <li>Use the rain as a way to cleanse them with water, or soak them in a bowl of salt water</li>
+                    
+                        <li>Smudge them with a sage stick or some palo santo. If you don’t have any handy, use a candle for a quick cleanse by fire!</li>
+                    
+                        <li>Bury them underground for 24 hours. This allows the earth to absorb any unwanted energy and refresh the crystals.</li>
+                    
+                        <li>Use a cleansing crystal. For example, you can lay your crystals on a selenite tower, and the selenite can clear the energy of the other crystals.</li>
+                    </ol>
+                </h4>
+            </div>
+        </div>
+        {% comment %} <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+           data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none; text-align: center; "> 
+           <div class ="as jewellery" style="text-align: center">
+            <a href="{% url 'category' 'SE' %}">
+             <div class="baa ">
+               <img src="{%static 'app/images/product/s1.jpg'%}"
+               class="img-responsive center-block" alt="">
+               <br></br>
+               <p class="fs-4 my-2 braclets">Selenite</p>
+              </div>
+            </a>
+          </div> 
+        
+        </div> {% endcomment %}
+    </div>    
+<br></br>
+{% endblock main-content %}
+
+
+
+
+

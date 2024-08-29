@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Feedback{% endblock title %}
+
+{% block main-content %}
+<div class="feedback">
+    <p style = text-align:center>Dear Customer,<br>
+      We hope you're enjoying your beautiful crystal jewellery from our website. Your satisfaction is our priority, and we would greatly appreciate your feedback to help us enhance your shopping experience.</p>
+     
+    <h4 class="text-center">Could you spare a moment to share your thoughts with us? Your insights will aid us in providing even better products and service.</h4>
+     
+    <div class="container">
+        <form class="" method="post" action="" >
+        {% csrf_token %}
+            {% comment %} <label>1. Your overall experience with us ?</label><br>
+            <span class="star-rating">
+              <input type="radio" name="rating1" value="1"><i></i>
+              <input type="radio" name="rating1" value="2"><i></i>
+              <input type="radio" name="rating1" value="3"><i></i>
+              <input type="radio" name="rating1" value="4"><i></i>
+              <input type="radio" name="rating1" value="5"><i></i>
+             </span> {% endcomment %}
+        
+            <div class="form-group">
+                <label for="fname">Name: </label>
+                <input name="name" autofocus type="text" id="fname" class="form-control" placeholder="Enter your Name" required>
+        
+                <label for="inputemail">Email: </label>
+                <input name="email" type="text" id="inputemail" class="form-control" placeholder="Enter your Email Address" required>
+    
+                <label for="comment">Comment: </label>
+                <textarea rows="8" cols="50"  name="comment" id="fname" class="form-control" placeholder="Write your views....." required></textarea>
+                <br>
+                <center><button onclick="myFunction()" type="submit"  class="btn btn-success btn-lg ">Post</button> </center>
+                <p id="demo"></p>
+                <script>
+                    function myFunction() {
+                        alert("Thank you for sharing your valuable feedback with us; your input is greatly appreciated!");
+                        document.getElementById("demo").innerHTML = text;
+                      }
+                </script>
+                <p style = text-align:center>Thank you for being a part of our crystal jewellery community. We look forward to hearing from you.</p>
+                <div class="text-center text-primary fw-bold">
+                    <small><a href="/">Go to home page</a></small>
+                </div>
+            <div>
+        </form>
+    </div>
+<br>
+{% endblock main-content %}

@@ -1,0 +1,72 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block main-content %}
+    <div class="container mt-3">
+        <br>
+        <h2 class="text-center">About us</h2>
+        </br>
+        <div class="row-container">
+            <div class="text-center" "about-section">
+            <h1 style="font-family: Georgia; font-size: 40px;">Your Journey of Healing Begins Here!</h1>
+            <h1 style="font-family: 'Lora', serif; font-size: 20px;">Here’s a Little Bit About WHAT WE DO</h1></div>
+            <br></br>
+            <div style="text-align: justify;">
+                <h4 style="font-family: 'Crimson Pro', serif; font-size: 26px;">   
+            The Crystal Palace is a one-stop destination for all your affordable Spiritual and Holistic Healing requirements💫.Walk through the doors at The Crystal Palace towards Spiritual Living 📿 and you’ll feel how healing and learning generate the positive energy 🧿 you’ve been seeking ⚡.The Crystal Palace has been offering the community a wide selection of tools that can help you on your journey 🍃🌈.</h4></div>
+            {% comment %} <div class="about-section">
+                <h1>About Us Page</h1>
+                <p>Some text about who we are and what we do.</p>
+                <p>Resize the browser window to see that this page is responsive by the way.</p>
+              </div> {% endcomment %}
+              <br>
+              <br>
+              <h2 style="text-align:center">Our Team</h2>
+              <div class="row">
+                <div class="column">
+                  <div class="card1">
+                    {% comment %} <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> {% endcomment %}
+                    <div class="container">
+                        <br>
+                      <h2 style="text-align:center">Sania Dmello</h2>
+                      <p class="title">CEO & Founder</p>
+                      {% comment %} <p>Some text that describes me lorem ipsum ipsum lorem.</p> {% endcomment %}
+                      <p>saniadmello11@gmail.com</p>
+                      <p><button class="button3">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card1">
+                    {% comment %} <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> {% endcomment %}
+                    <div class="container">
+                        <br>
+                      <h2 style="text-align:center">Sally Dmello</h2>
+                      <p class="title">Co-Founder</p>
+                      {% comment %} <p>Some text that describes me lorem ipsum ipsum lorem.</p> {% endcomment %}
+                      <p>sallydmello23@gmail.com</p>
+                      <p><button class="button3">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column ">
+                  <div class="card1">
+                    {% comment %} <img src="/w3images/team3.jpg" alt="John" style="width:100%"> {% endcomment %}
+                    <div class="container">
+                        <br>
+                      <h2 style="text-align:center">Daisy Dabre</h2>
+                      <p class="title">Co-Founder</p>
+                      {% comment %} <p>Some text that describes me lorem ipsum ipsum lorem.</p> {% endcomment %}
+                      <p>dabredaisy@gmail.com</p>
+                      <p><button class="button3">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>    
+    <br></br>
+{% endblock main-content %}

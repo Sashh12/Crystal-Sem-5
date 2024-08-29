@@ -1,0 +1,98 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}ByMeaning{% endblock title %}
+
+{% block main-content %}
+<div class="container">
+    <h2 class="my-3  text-danger text-center">By Meaning</h2>
+    <div class="row container"> 
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery cbg">
+          <a href="{% url 'category' 'AN' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/9a.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-2 braclets">Anxiety</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery dbg">
+          <a href="{% url 'category' 'DP' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/3c.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-2 braclets">Depression</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery dbg">
+          <a href="{% url 'category' 'PC' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/2b.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-2 braclets">Peace</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <br></br>
+    <div class="row container"> 
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery cbg">
+          <a href="{% url 'category' 'MT' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/6a.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-1 braclets">Motivation</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery dbg">
+          <a href="{% url 'category' 'HP' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/7a.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-2 braclets">Happiness</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+       data-wow-delay="0.6s" style="animation duration:1; animation-delay:0.6s; animation-name:none;">
+        <div class ="as jewellery dbg">
+          <a href="{% url 'category' 'NG' %}">
+            <div class="abb text-center ">
+             <img src="{%static 'app/images/product/8b.jpg'%}"
+             class="img-responsive center-block" alt="">
+             <br></br>
+             <p class="fs-4 my-2 braclets">Negativity</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+<br></br>
+{% endblock main-content %}
